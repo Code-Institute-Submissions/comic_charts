@@ -105,7 +105,7 @@
                             Total align
                         </div>
                         <div class="chart-stage">
-                            <div id="total_characters"></div>
+                            <div id="total_align"></div>
                         </div>
                     </div>
                 </div>
@@ -178,13 +178,13 @@
 
 
 </div>
-
-<script scr="{{ url_for ('static', filename = 'lib/js/crossfilter.js') }}"></script>
-<script scr="{{ url_for ('static', filename = 'lib/js/d3.js') }}"></script>
-<script scr="{{ url_for ('static', filename = 'lib/js/dc.js') }}"></script>
-<script scr="{{ url_for ('static', filename = 'lib/js/jquery.min.js') }}"></script>
-<script scr="{{ url_for ('static', filename = 'lib/js/keen.min.js') }}"></script>
-<script scr="{{ url_for ('static', filename = 'lib/js/queue.min.js') }}"></script>
-<script scr="{{ url_for ('static', filename = 'lib/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/jquery.min.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/bootstrap.min.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/crossfilter.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/d3.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/dc.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/queue.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'lib/js/keen.min.js') }}"></script>
+<script src="{{ url_for ('static', filename = 'js/graphs.js') }}"></script>
 </body>
 </html>

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Comic characters graph </title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/keen-dashboards.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/dc.css') }}">
+
+</head>
+<body class="application">
+
+<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" href="./"> Comic characters </a>
+        </div>
+    </div>
+</div>
+
+<div id="outer" class="container-fluid">
+    <div class="row">
+
+        <!--select criteria-->
+
+        <div class="col-sm-12">
+
+            <!--select Comic-->
+            <div class="col-sm-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Select comic
+                    </div>
+                    <div class="chart-stage">
+                        <div id="select_comic"></div>
+                    </div>
+                </div>
+            </div>
+            <!--select Comic-->
+
+             <!--select Gender-->
+            <div class="col-sm-6">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Select gender
+                    </div>
+                    <div class="chart-stage">
+                        <div id="select_gender"></div>
+                    </div>
+                </div>
+            </div>
+            <!--select Gender-->
+        </div>
+         <!--select criteria-->
+    </div>
+
+    <div class="row">
+
+        <!-- middle charts -->
+        <div class="col-sm-12">
+
+            <!-- left charts -->
+
+            <div class="col-md-4">
+
+                <!-- Ranking charts -->
+                    <div class="col-sm-12">
+                        <div class="chart-wrapper">
+                            <div class="chart-title">
+                                Ranking characters most appearances
+                            </div>
+                            <div class="chart-stage">
+                                <div id="ranking_names"></div>
+                            </div>
+                        </div>
+                    </div>
+                <!-- Ranking charts -->
+
+            </div>
+            <!-- left charts -->
+
+
+            <!-- center charts -->
+
+            <div class="col-md-4">
+
+                <!-- Total_characters -->
+
+                <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Total of characters
+                        </div>
+                        <div class="chart-stage">
+                            <div id="total_characters"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Total_characters -->
+
+                <!-- Total_align -->
+                  <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Total align
+                        </div>
+                        <div class="chart-stage">
+                            <div id="total_characters"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total_align -->
+
+            </div>
+
+            <!-- center charts -->
+
+            <!-- right charts -->
+            <div class="col-sm-4">
+                <!-- ID pie -->
+
+                  <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Identity
+                        </div>
+                        <div class="chart-stage">
+                            <div id="identity"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ID pie -->
+
+
+                <!-- alive -->
+                  <div class="col-sm-12">
+                    <div class="chart-wrapper">
+                        <div class="chart-title">
+                            Dead or alive?
+                        </div>
+                        <div class="chart-stage">
+                            <div id="dead_or_alive"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Total_align -->
+            </div>
+            <!-- right charts -->
+
+
+        </div>
+        <!-- middle charts -->
+    </div>
+        <!-- bottom charts -->
+
+            <!-- year of appearances -->
+    <div class="row">
+            <div class="col-sm-12">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Year of appearances
+                    </div>
+                    <div class="chart-stage">
+                        <div id="year_appearance"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- year of appearances -->
+    </div>
+        <!-- bottom charts -->
+
+    </div>
+
+
+
+</div>
+
+<script scr="{{ url_for ('static', filename = 'lib/js/crossfilter.js') }}"></script>
+<script scr="{{ url_for ('static', filename = 'lib/js/d3.js') }}"></script>
+<script scr="{{ url_for ('static', filename = 'lib/js/dc.js') }}"></script>
+<script scr="{{ url_for ('static', filename = 'lib/js/jquery.min.js') }}"></script>
+<script scr="{{ url_for ('static', filename = 'lib/js/keen.min.js') }}"></script>
+<script scr="{{ url_for ('static', filename = 'lib/js/queue.min.js') }}"></script>
+<script scr="{{ url_for ('static', filename = 'lib/js/bootstrap.min.js') }}"></script>
+</body>
+</html>

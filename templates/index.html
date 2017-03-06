@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/keen-dashboards.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/dc.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/comic.css')}}">
 
 </head>
 <body class="application">
@@ -23,10 +24,10 @@
 
         <!--select criteria-->
 
-        <div class="col-sm-12">
+        <div class="col-sm-10">
 
             <!--select Comic-->
-            <div class="col-sm-6">
+            <div class="col-sm-3 select">
                 <div class="chart-wrapper">
                     <div class="chart-title">
                         Select comic
@@ -39,7 +40,7 @@
             <!--select Comic-->
 
              <!--select Gender-->
-            <div class="col-sm-6">
+            <div class="col-sm-3 select ">
                 <div class="chart-wrapper">
                     <div class="chart-title">
                         Select gender
@@ -50,6 +51,32 @@
                 </div>
             </div>
             <!--select Gender-->
+
+            <!--select Hair-->
+            <div class="col-sm-3 select ">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Select color of the Eyes
+                    </div>
+                    <div class="chart-stage">
+                        <div id="select_eye"></div>
+                    </div>
+                </div>
+            </div>
+            <!--select Hair-->
+
+            <!--select Eye-->
+            <div class="col-sm-3 select">
+                <div class="chart-wrapper">
+                    <div class="chart-title">
+                        Select color of the hair
+                    </div>
+                    <div class="chart-stage">
+                        <div id="select_hair"></div>
+                    </div>
+                </div>
+            </div>
+            <!--select Eye-->
         </div>
          <!--select criteria-->
     </div>
@@ -70,7 +97,8 @@
                                 Ranking characters most appearances
                             </div>
                             <div class="chart-stage">
-                                <div id="ranking_names"></div>
+                                <div id="ranking_names">
+                                </div>
                             </div>
                         </div>
                     </div>

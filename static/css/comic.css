@@ -1,0 +1,110 @@
+body{
+    background-color: #8F6DB2!important;
+}
+
+.navbar{
+    background-color: #CA3B67;
+    background-size: cover;
+    height: 80px!important;
+    font-family: 'Bangers', cursive;
+    padding-left: 300px!important;
+    padding-top: 20px!important;
+    font-size: 60px!important;
+
+}
+
+#top{
+    height:30%;
+}
+
+#outer{
+    height: 100%;
+}
+
+#all_criteria{
+    width: 80%!important;
+    display: block;
+    margin: auto;
+    margin-top: 60px!important;
+    margin-bottom: 60px!important;
+
+}
+
+.criteria{
+    padding: 10px!important;
+}
+
+.navbar-header{
+    display: block!important;
+    margin: auto;
+    float: none;
+}
+
+.chart-title{
+    background-color: #FFFEFA!important;
+    color: #8F6DB2!important;
+    font-family: 'Ceviche One', cursive;
+    font-size: 20px!important;
+
+}
+
+.chart-stage{
+    background-color: #E7CFFF!important;
+}
+
+
+.dc-chart text{
+    fill: black!important;
+    font-family: Helvetica!important;
+    font-size: 14px!important;
+    -webkit-text-stroke: 1px black!important;
+    padding-bottom: 10px!important;
+
+}
+
+div.dc-chart{
+    float: none!important;
+}
+
+/* align chart */
+
+#total_align{
+    height: 300px!important;
+    padding-top: 20px!important;
+    width:100%!important;
+}
+
+/* total characters chart */
+#total{
+    background-color: #CA3B67!important;
+}
+
+#total_characters span{
+    text-align: center!important;
+    color: white;
+    display: block!important;
+    margin: auto!important;
+    float: none!important;
+    font-size: 50px!important;
+}
+
+/* total years chart */
+
+#year_appearance .x.axis text {
+    text-anchor: end !important;
+    transform: rotate(-45deg);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px!important;
+}
+
+#year_appearance .y.axis text {
+    text-anchor: end !important;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 10px!important;
+}
+
+#year_appearance .dc-chart text{
+    font-family: Helvetica!important;
+}
+
+/* total identity chart */

@@ -115,9 +115,8 @@ function makeGraphs(error, projectsJson){
         .height(300)
         .dimension(nameDim)
         .group(total_appearance);
-    rankingNameChart.ordering(function (d) { return -d.value});
-    rankingNameChart.rowsCap([7]);
-    rankingNameChart.othersGrouper(false);
+   rankingNameChart.rowsCap([7]);
+   rankingNameChart.othersGrouper(false);
 
 
     totalIdChart
@@ -143,23 +142,26 @@ function makeGraphs(error, projectsJson){
         .group(total_of_characters);
 
     totalAlignChart
-        .width(300)
-        .height(150)
-        .innerRadius(20)
+        .width(350)
+        .height(250)
         .transitionDuration(1500)
         .dimension(alignDim)
         .group(total_align);
 
+
+
     totalYearChart
-        .width(1000)
-        .height(200)
+        .width(1300)
+        .height(400)
         .dimension(yearDim)
         .group(total_year)
-        .x(d3.scale.ordinal().domain([(minYear),(maxYear)]).rangeBands([0,10]))
+        .x(d3.scale.ordinal().domain([(minYear),(maxYear)]))
         .xUnits(dc.units.ordinal)
-        .elasticY(true)
         .elasticX(true)
-        .brushOn(false);
+        .brushOn(false)
+        .renderArea(true)
+        .yAxisLabel("Number of characters")
+        .colors(["#CA3B67"]);
 
 dc.renderAll();
 };

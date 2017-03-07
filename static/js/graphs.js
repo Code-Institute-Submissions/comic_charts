@@ -73,6 +73,8 @@ function makeGraphs(error, projectsJson){
     var total_hair = hairDim.group();
     var total_eye = eyeDim.group();
 
+
+
 // MAX AND MIN YEAR
 
     var minYear = yearDim.bottom(1)[0]["YEAR"];
@@ -111,25 +113,26 @@ function makeGraphs(error, projectsJson){
 
 
     rankingNameChart
-        .width(300)
-        .height(300)
+        .width(380)
+        .height(425)
         .dimension(nameDim)
         .group(total_appearance);
-   rankingNameChart.rowsCap([7]);
-   rankingNameChart.othersGrouper(false);
+    rankingNameChart.ordering(function (d) { return -d.value});
+    rankingNameChart.rowsCap([7]);
+    rankingNameChart.othersGrouper(false);
 
 
     totalIdChart
-        .width(300)
+        .width(400)
         .height(150)
         .transitionDuration(1500)
         .dimension(IdDim)
         .group(total_id);
 
     totalAliveChart
-        .width(300)
-        .height(150)
-        .innerRadius(20)
+        .width(350)
+        .height(200)
+        .innerRadius(40)
         .transitionDuration(1500)
         .dimension(aliveDim)
         .group(total_alive);

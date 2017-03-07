@@ -1,16 +1,21 @@
 body{
-    background-color: #8F6DB2!important;
+    background: #AA076B!important; /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #AA076B , #61045F)!important; /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #AA076B , #61045F)!important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 .navbar{
-    background-color: #CA3B67;
+    background-color: #8F6DB2;
     background-size: cover;
     height: 80px!important;
     font-family: 'Bangers', cursive;
     padding-left: 300px!important;
     padding-top: 20px!important;
-    font-size: 60px!important;
+    border-bottom: 5px solid white;
+}
 
+navbar a{
+      font-size: 60px!important;
 }
 
 #top{
@@ -45,11 +50,19 @@ body{
     color: #8F6DB2!important;
     font-family: 'Ceviche One', cursive;
     font-size: 20px!important;
+    border: 2px solid white!important;
 
+}
+
+.criteria .chart-title{
+  background-color: #8F6DB2!important;
+    color: #FFFEFA!important;
 }
 
 .chart-stage{
     background-color: #E7CFFF!important;
+    border: 2px solid white!important;
+
 }
 
 
@@ -61,6 +74,9 @@ body{
     padding-bottom: 10px!important;
 
 }
+
+
+
 
 div.dc-chart{
     float: none!important;
@@ -107,4 +123,26 @@ div.dc-chart{
     font-family: Helvetica!important;
 }
 
-/* total identity chart */
+/* total ranking chart */
+
+#ranking {
+    height:450px!important;
+}
+
+#ranking_names text {
+    font-size: 13px!important;
+}
+
+/* total identities chart */
+
+
+#identity text {
+    font-size: 13px!important;
+}
+
+/* total dead or alive chart */
+
+#dead_or_alive {
+    height:220px!important;
+}
+

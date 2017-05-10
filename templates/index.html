@@ -7,206 +7,221 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/keen-dashboards.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='lib/css/dc.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/comic.css')}}">
-    <link href="https://fonts.googleapis.com/css?family=Bangers|Ceviche+One|Allan" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/font-awesome/css/font-awesome.min.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Bangers|Ceviche+One|Allan|Open+Sans" rel="stylesheet">
 
 </head>
-<body class="application">
-
-<div id="top" class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <a class="navbar-brand" href="./"> How many comic characters...? </a>
-        </div>
+<body>
+<section id="header">
+    <div id="top" class="navbar navbar-inverse" role="navigation">
+        <a class="white" href="./"> How many superheros are...? </a>
+        <p class="white text medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Fusce mattis dolor ligula, quis dictum sem dignissim et.
+            In volutpat ultrices placerat. Nulla molestie sit amet mi eget commodo.</p>
     </div>
-</div>
+</section>
+
 
 <div id="outer" class="container-fluid">
     <div class="row">
 
         <!--select criteria-->
 
-        <div id="all_criteria">
+        <div id="all_criteria" class="container">
+            <div class="row" >
+                <p class="white description">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Fusce mattis dolor ligula, quis dictum sem dignissim et.</p>
+            </div>
 
-            <!--select Comic-->
-            <div class="criteria col-sm-3 select">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Select comic
-                    </div>
-                    <div class="chart-stage">
-                        <div id="select_comic"></div>
+             <!--select comic-->
+            <div id="comic" class="criteria col-sm-3 select ">
+                <div class="col-md-6">
+                    <i class=" white fa fa-users" aria-hidden="true"></i>
+                </div>
+                <div class="chart-wrapper col-md-6">
+                    <div class="pos_select">
+                        <div class="chart-title">
+                            <span class="description white"> Comic </span>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="select_comic"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--select Comic-->
-
+            <!--select comic-->
              <!--select Gender-->
-            <div class="criteria col-sm-3 select ">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Select gender
-                    </div>
-                    <div class="chart-stage">
-                        <div id="select_gender"></div>
+            <div id="gender" class="criteria col-sm-3 select ">
+                <div class="col-md-6">
+                    <i class=" white fa fa-venus-mars" aria-hidden="true"></i>
+                </div>
+                <div class="chart-wrapper col-md-6">
+                    <div class="pos_select">
+                        <div class="chart-title">
+                            <span class="description white"> Gender </span>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="select_gender"></div>
+                        </div>
                     </div>
                 </div>
             </div>
             <!--select Gender-->
-
-            <!--select Hair-->
-            <div class="criteria col-sm-3 select ">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Select color of the Eyes
-                    </div>
-                    <div class="chart-stage">
-                        <div id="select_eye"></div>
+             <!--select eye-->
+            <div id="eye" class="criteria col-sm-3 select ">
+                <div class="col-md-6">
+                    <i class=" white fa fa-eye" aria-hidden="true"></i>
+                </div>
+                <div class="chart-wrapper col-md-6">
+                    <div class="pos_select">
+                        <div class="chart-title">
+                            <span class="description white"> Eyes </span>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="select_eye"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--select Hair-->
-
-            <!--select Eye-->
-            <div class="criteria col-sm-3 select">
-                <div class="chart-wrapper">
-                    <div class="chart-title">
-                        Select color of the hair
-                    </div>
-                    <div class="chart-stage">
-                        <div id="select_hair"></div>
+            <!--select eye-->
+             <!--select hair-->
+            <div id="hair" class="criteria col-sm-3 select ">
+                <div class="col-md-6">
+                    <i class=" white fa fa-github-alt" aria-hidden="true"></i>
+                </div>
+                <div class="chart-wrapper col-md-6">
+                    <div class="pos_select">
+                        <div class="chart-title">
+                            <span class="description white"> Hair </span>
+                        </div>
+                        <div class="chart-stage">
+                            <div id="select_hair"></div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <!--select Eye-->
+            <!--select hair-->
         </div>
          <!--select criteria-->
     </div>
+     <div class="row" id="number_and_pie">
+         <div class="col-md-4">
+             <img src="../static/css/girl.png" alt="superhero">
+         </div>
+         <div class="col-md-4">
+             <!-- Total_characters -->
+             <div class="col-sm-12">
+                 <div  class="chart-wrapper">
+                     <div id="total" class="chart-stage">
+                         <span class="white text medium"> Superheros: </span>
+                         <div id="total_characters"></div>
+                     </div>
+                     <div class="chart-title white_bg">
+                         <span class="black text medium"> How many there are? </span>
+                     </div>
 
-    <div class="row">
-
-        <!-- middle charts -->
-        <div class="col-sm-12">
-
-            <!-- left charts -->
-
+                 </div>
+             </div>
+             <!-- Total_characters -->
+         </div>
+         <div class="col-md-4">
+             <img src="../static/css/guy.png" alt="superhero">
+         </div>
+     </div>
+    <div id="pie" class="row center_content">
             <div class="col-md-4">
-
-                <!-- Ranking charts -->
-                    <div class="col-sm-12">
-                        <div class="chart-wrapper">
-                            <div class="chart-title">
-                                Who appears the most?
-                            </div>
-                            <div id="ranking" class="chart-stage">
-                                <div id="ranking_names">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                <!-- Ranking charts -->
-
-            </div>
-            <!-- left charts -->
-
-
-            <!-- center charts -->
-
-            <div class="col-md-4">
-
-                <!-- Total_characters -->
-
-                <div class="col-sm-12">
-                    <div  class="chart-wrapper">
-                        <div class="chart-title">
-                            How many there are?
-                        </div>
-                        <div id="total" class="chart-stage">
-                            <div id="total_characters"></div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Total_characters -->
-
                 <!-- Total_align -->
                   <div class="col-sm-12">
-                    <div class="chart-wrapper">
-                        <div class="chart-title">
-                            How many are good or bad?
-                        </div>
+                    <div class="chart-wrapper black_bg">
                         <div class="chart-stage">
                             <div id="total_align"></div>
                         </div>
+                     <div class="chart-title white_bg center_content">
+                         <span class="black text medium"> Are they good or bad? </span>
+                     </div>
                     </div>
                 </div>
-
                 <!-- Total_align -->
-
             </div>
-
-            <!-- center charts -->
-
-            <!-- right charts -->
-            <div class="col-sm-4">
+            <div class="col-md-4">
                 <!-- ID pie -->
 
                   <div class="col-sm-12">
                     <div class="chart-wrapper">
-                        <div class="chart-title">
-                            How many hide their identity?
-                        </div>
-                        <div class="chart-stage">
+                        <div class="chart-stage black_bg">
                             <div id="identity"></div>
+                        </div>
+                        <div class="chart-title white_bg center_content">
+                             <span class="black text medium"> Are their identity know? </span>
                         </div>
                     </div>
                 </div>
-
                 <!-- ID pie -->
-
-
+            </div>
+            <div class="col-md-4">
                 <!-- alive -->
                   <div class="col-sm-12">
                     <div class="chart-wrapper">
-                        <div class="chart-title">
-                            How many are still alive?
-                        </div>
-                        <div class="chart-stage">
+                        <div class="chart-stage black_bg">
                             <div id="dead_or_alive"></div>
                         </div>
+                        <div class="chart-title white_bg center_content">
+                             <span class="black text medium"> Are they alive? </span>
+                        </div>
+
                     </div>
                 </div>
-
-                <!-- Total_align -->
             </div>
-            <!-- right charts -->
-
-
-        </div>
-        <!-- middle charts -->
     </div>
-        <!-- bottom charts -->
 
-            <!-- year of appearances -->
-    <div class="row">
-            <div class="col-sm-12">
+    <div class="row center_content" id="ranking_container">
+
+        <div class="col-md-8">
+            <!-- Ranking charts -->
                 <div class="chart-wrapper">
-                    <div class="chart-title">
-                        When did they appear?
+                    <div id="ranking" class="chart-stage yellow_bg">
+                        <div id="ranking_names">
+                        </div>
                     </div>
-                    <div class="chart-stage">
-                        <div id="year_appearance"></div>
+                    <div class="chart-title white_bg center_content">
+                        <span class="black text medium"> Who is the most popular? </span>
                     </div>
-                </div>
             </div>
-
-            <!-- year of appearances -->
+            <!-- Ranking charts -->
+        </div>
+        <div class="col-md-2 purple_bg center_column">
+            <i class="fa fa-trophy white medium" aria-hidden="true"></i>
+        <p class="white description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Fusce mattis dolor ligula, quis dictum sem dignissim et.
+            In volutpat ultrices placerat.</p>
+        </div>
     </div>
-        <!-- bottom charts -->
+    <div class="row center_content" id="ranking_container">
 
+        <div class="col-md-2 purple_bg center_column">
+            <i class="fa fa-odnoklassniki white medium" aria-hidden="true"></i>
+        <p class="white description ">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Fusce mattis dolor ligula, quis dictum sem dignissim et.
+            In volutpat ultrices placerat.</p>
+        </div>
+        <div class="col-md-9">
+            <!-- Ranking charts -->
+                <div class="chart-wrapper">
+                    <div id="ranking" class="chart-stage blue_bg">
+                        <div id="year_appearance">
+                        </div>
+                    </div>
+                    <div class="chart-title white_bg center_content">
+                        <span class="black text medium"> When were they born? </span>
+                    </div>
+            </div>
+            <!-- Ranking charts -->
+        </div>
     </div>
-
-
-
 </div>
+
+
+
 <script src="{{ url_for ('static', filename = 'lib/js/jquery.min.js') }}"></script>
 <script src="{{ url_for ('static', filename = 'lib/js/bootstrap.min.js') }}"></script>
 <script src="{{ url_for ('static', filename = 'lib/js/crossfilter.js') }}"></script>

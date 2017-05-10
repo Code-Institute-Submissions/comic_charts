@@ -113,8 +113,8 @@ function makeGraphs(error, projectsJson){
 
 
     rankingNameChart
-        .width(380)
-        .height(425)
+        .width(750)
+        .height(250)
         .dimension(nameDim)
         .group(total_appearance);
     rankingNameChart.ordering(function (d) { return -d.value});
@@ -154,8 +154,8 @@ function makeGraphs(error, projectsJson){
 
 
     totalYearChart
-        .width(1300)
-        .height(400)
+        .width(1020)
+        .height(280)
         .dimension(yearDim)
         .group(total_year)
         .x(d3.scale.ordinal().domain([(minYear),(maxYear)]))

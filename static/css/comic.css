@@ -261,30 +261,13 @@ img{
  }
 
 
-
-
-.dc-chart text{
-    fill: black!important;
-    font-family: Helvetica!important;
-    font-size: 14px!important;
-    -webkit-text-stroke: 1px black!important;
-    padding-bottom: 10px!important;
-
+#footer{
+    height:100px;
+    margin-top: 30px;
 }
 
-
-
-
-div.dc-chart{
-    float: none!important;
-}
-
-/* align chart */
-
-#total_align{
-    height: 300px!important;
-    padding-top: 20px!important;
-    width:100%!important;
+#footer p{
+    text-align: center;
 }
 
 /* total characters chart */
@@ -313,33 +296,11 @@ div.dc-chart{
 #year_appearance .y.axis text {
     text-anchor: end !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 10px!important;
+    font-size: 2px!important;
+    color: white!important;
 }
 
-#year_appearance .dc-chart text{
-    font-family: Helvetica!important;
+
+text{
+    color: blue!important;
 }
-
-/* total ranking chart */
-
-#ranking {
-    height:450px!important;
-}
-
-#ranking_names text {
-    font-size: 13px!important;
-}
-
-/* total identities chart */
-
-
-#identity text {
-    font-size: 13px!important;
-}
-
-/* total dead or alive chart */
-
-#dead_or_alive {
-    height:220px!important;
-}
-

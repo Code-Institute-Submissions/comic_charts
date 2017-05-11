@@ -116,6 +116,7 @@ function makeGraphs(error, projectsJson){
         .width(750)
         .height(250)
         .dimension(nameDim)
+        .ordinalColors(['#FB4248','#CA3B67','#2B3D4F','#6CBBDA','#ff7f00'])
         .group(total_appearance);
     rankingNameChart.ordering(function (d) { return -d.value});
     rankingNameChart.rowsCap([7]);
@@ -124,9 +125,10 @@ function makeGraphs(error, projectsJson){
 
     totalIdChart
         .width(400)
-        .height(150)
+        .height(250)
         .transitionDuration(1500)
         .dimension(IdDim)
+        .ordinalColors(['#FB4248','#F6E147','#CA3B67','#6CBBDA','#ff7f00'])
         .group(total_id);
 
     totalAliveChart
@@ -134,6 +136,7 @@ function makeGraphs(error, projectsJson){
         .height(200)
         .innerRadius(40)
         .transitionDuration(1500)
+        .ordinalColors(['#FB4248','#CA3B67','#F6E147','#6CBBDA','#ff7f00'])
         .dimension(aliveDim)
         .group(total_alive);
 
@@ -145,8 +148,9 @@ function makeGraphs(error, projectsJson){
         .group(total_of_characters);
 
     totalAlignChart
-        .width(350)
-        .height(250)
+        .width(300)
+        .height(200)
+        .ordinalColors(['#FB4248','#F6E147','#CA3B67','#6CBBDA','#ff7f00'])
         .transitionDuration(1500)
         .dimension(alignDim)
         .group(total_align);
@@ -164,7 +168,7 @@ function makeGraphs(error, projectsJson){
         .brushOn(false)
         .renderArea(true)
         .yAxisLabel("Number of characters")
-        .colors(["#CA3B67"]);
+        .colors(["#F6E147"]);
 
 dc.renderAll();
 };

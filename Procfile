@@ -1,0 +1,1 @@
+web: gunicorn comic_ok:app

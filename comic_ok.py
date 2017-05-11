@@ -1,14 +1,22 @@
 from flask import Flask
 from flask import render_template
 from pymongo import MongoClient
+import os
 import json
 
 app = Flask(__name__)
 
-MONGODB_HOST = 'localhost'
-MONGO_PORT = 27017
-DBS_NAME = 'comic_ok'
-COLLECTION_NAME = 'characters_ok'
+
+MONGODB_URI = os.getenv('MONGODB_URI')
+DBS_NAME = os.getenv('MONGO_DB_NAME','comic_ok')
+COLLECTION_NAME = os.getenv('MONGO_COLLECTION_NAME','projects')
+
+
+# MONGODB_HOST = 'localhost'
+# MONGO_PORT = 27017
+# DBS_NAME = 'comic_ok'
+# COLLECTION_NAME = 'characters_ok'
+
 FIELDS = {
         "_id": False, "Comic": True, "name": True, "ID": True, "ALIGN": True,
         "EYE": True, "HAIR": True, "SEX": True, "GSM": True, "ALIVE": True,
@@ -24,7 +32,8 @@ def index():
 
 @app.route('/comic_ok/characters_ok')
 def comic_ok():
-    connection = MongoClient(MONGODB_HOST, MONGO_PORT)
+    connection = MongoClient(MONGODB_URI)
+    #connection = MongoClient(MONGODB_HOST, MONGO_PORT)
     collection = connection[DBS_NAME][COLLECTION_NAME]
     projects = collection.find(projection = FIELDS, limit = 50000)
     json_projects = []
